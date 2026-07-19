@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d0d1a">
+<title>Grand Finals — The Gaming Gauntlet 2026</title>
+<meta name="description" content="The winning team battles it out for the prize pool.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<nav class="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">GAUNTLET<span>26</span></a>
+<div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="rules.html">Rules</a>
+<a href="teams.html">Teams</a>
+<a href="games.html">Games</a>
+<a href="scoring.html">Scoring</a>
+<a href="live.html">Live</a>
+<a href="results.html">Results</a>
+<a href="recap.html">Recap</a>
+<a href="clips.html">Clips</a>
+<a class="is-current" href="finals.html">Finals</a>
+</div>
+<div class="nav-badge">€/$100 POOL</div>
+<button aria-expanded="false" aria-label="Toggle menu" class="nav-toggle" id="navToggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+
+<main>
+<section class="section finals-section" id="finals">
+<div class="container">
+<p class="eyebrow">Grand Finals</p>
+<h2 class="section-title">Only One Team<br/>Fights For Gold</h2>
+<p class="section-lead">The winning team advances. Then they battle each other.</p>
+<div class="flow-row">
+<div class="flow-card cut-corner" data-reveal="">
+<h3>Team Phase</h3>
+<p>Duos, trios, or squads compete across 6 games</p>
+</div>
+<div aria-hidden="true" class="flow-arrow">→</div>
+<div class="flow-card cut-corner" data-reveal="">
+<h3>Winning Team</h3>
+<p>Highest points wins</p>
+</div>
+<div aria-hidden="true" class="flow-arrow">→</div>
+<div class="flow-card cut-corner" data-reveal="">
+<h3>Individual Battle</h3>
+<p>Team members go 1v1</p>
+</div>
+</div>
+<div class="podium" data-reveal="">
+<div class="podium-place cut-corner podium-silver">
+<span class="podium-medal">🥈</span>
+<span class="podium-amount">€/$30</span>
+<span class="podium-label">2nd</span>
+</div>
+<div class="podium-place cut-corner podium-gold">
+<span class="podium-medal">🥇</span>
+<span class="podium-amount">€/$50</span>
+<span class="podium-label">1st</span>
+</div>
+<div class="podium-place cut-corner podium-bronze">
+<span class="podium-medal">🥉</span>
+<span class="podium-amount">€/$20</span>
+<span class="podium-label">3rd</span>
+</div>
+</div>
+<p class="pool-total">Total Prize Pool — <span data-count="100" data-prefix="€/$">€/$0</span></p>
+</div>
+</section>
+</main>
+
+<footer class="cta-section" id="ready">
+<div class="container">
+<p class="eyebrow">Are You Ready?</p>
+<h2 class="cta-title">May The Best<br/>Team Win 🏆</h2>
+<div class="cta-stats">6 Games · Duo / Trio / Squad · <span data-count="100" data-prefix="€/$">€/$0</span> Prize Pool</div>
+<p class="cta-sub">Consistency wins the league. Only one team gets to fight for the gold.</p>
+<p class="cta-tagline">GOOD LUCK. HAVE FUN. NO MERCY. ⚡</p>
+<p class="footer-fineprint">The Gaming Gauntlet · 2026</p>
+</div>
+</footer>
+
+<div id="syncBadge"><span class="dot"></span><span id="syncBadgeText">Live view</span></div>
+
+<button id="adminToggle">🔐 Host</button>
+<div id="adminPanel">
+<div class="admin-title">Host Login</div>
+<input autocomplete="username" id="adminEmail" placeholder="Email" type="email"/>
+<input autocomplete="current-password" id="adminPassword" placeholder="Password" type="password"/>
+<button id="adminLoginBtn">Log In</button>
+<button id="adminLogoutBtn">Log Out</button>
+<div id="adminStatus">Not logged in</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="site.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d0d1a">
+<title>Teams — The Gaming Gauntlet 2026</title>
+<meta name="description" content="Build your duo, trio, or squad for the Gauntlet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<nav class="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">GAUNTLET<span>26</span></a>
+<div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="rules.html">Rules</a>
+<a class="is-current" href="teams.html">Teams</a>
+<a href="games.html">Games</a>
+<a href="scoring.html">Scoring</a>
+<a href="live.html">Live</a>
+<a href="results.html">Results</a>
+<a href="recap.html">Recap</a>
+<a href="clips.html">Clips</a>
+<a href="finals.html">Finals</a>
+</div>
+<div class="nav-badge">€/$100 POOL</div>
+<button aria-expanded="false" aria-label="Toggle menu" class="nav-toggle" id="navToggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+
+<main>
+<section class="section team-format-section" id="team-format">
+<div class="container">
+<p class="eyebrow">Team Format</p>
+<h2 class="section-title">Build Your Squad</h2>
+<p class="section-lead">Pick a format below, then build your teams right here on the page.</p>
+<div class="team-mode-cards" data-reveal="">
+<div class="team-mode-card cut-corner" data-mode="duo">
+<h3>Duo</h3>
+<p>2 players. You choose your own partner.</p>
+</div>
+<div class="team-mode-card cut-corner" data-mode="trio">
+<h3>Trio</h3>
+<p>3 players. Teams are randomly drafted.</p>
+</div>
+<div class="team-mode-card cut-corner" data-mode="squad">
+<h3>Squad</h3>
+<p>4 players. Teams are randomly drafted.</p>
+</div>
+</div>
+<div class="builder-panel" data-reveal="" id="duoUi">
+<div class="builder-row">
+<input id="duoInputA" placeholder="Player 1 name" type="text"/>
+<input id="duoInputB" placeholder="Player 2 name" type="text"/>
+<button class="btn-primary" id="addDuoBtn">Add Duo</button>
+</div>
+<div class="team-results" id="duoTeamsList"></div>
+</div>
+<div class="builder-panel" data-reveal="" id="groupUi" style="display:none;">
+<div class="builder-row">
+<input id="playerInput" placeholder="Add a player name" type="text"/>
+<button class="btn-primary" id="addPlayerBtn">Add Player</button>
+</div>
+<div class="player-chips" id="groupPlayersList"></div>
+<button class="btn-ghost" id="shuffleTeamsBtn">🎲 Shuffle Into Teams Of <span id="groupSizeLabel">3</span></button>
+<div class="team-results" id="groupTeamsList"></div>
+</div>
+<ul class="key-rules" data-reveal="" style="margin-top:2.5rem;">
+<li>Same teams stay together for the whole tournament</li>
+<li>A different player represents the team each game, whenever possible</li>
+<li>Duo teams: both players are active in every game</li>
+<li>Everyone plays at least one event — no single player carries it all</li>
+</ul>
+</div>
+</section>
+</main>
+
+<footer class="cta-section" id="ready">
+<div class="container">
+<p class="eyebrow">Are You Ready?</p>
+<h2 class="cta-title">May The Best<br/>Team Win 🏆</h2>
+<div class="cta-stats">6 Games · Duo / Trio / Squad · <span data-count="100" data-prefix="€/$">€/$0</span> Prize Pool</div>
+<p class="cta-sub">Consistency wins the league. Only one team gets to fight for the gold.</p>
+<p class="cta-tagline">GOOD LUCK. HAVE FUN. NO MERCY. ⚡</p>
+<p class="footer-fineprint">The Gaming Gauntlet · 2026</p>
+</div>
+</footer>
+
+<div id="syncBadge"><span class="dot"></span><span id="syncBadgeText">Live view</span></div>
+
+<button id="adminToggle">🔐 Host</button>
+<div id="adminPanel">
+<div class="admin-title">Host Login</div>
+<input autocomplete="username" id="adminEmail" placeholder="Email" type="email"/>
+<input autocomplete="current-password" id="adminPassword" placeholder="Password" type="password"/>
+<button id="adminLoginBtn">Log In</button>
+<button id="adminLogoutBtn">Log Out</button>
+<div id="adminStatus">Not logged in</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="site.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

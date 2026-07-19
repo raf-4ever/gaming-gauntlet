@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d0d1a">
+<title>The Gaming Gauntlet 2026 — Friend Showdown</title>
+<meta name="description" content="6 games chosen live by the wheel, flexible duo/trio/squad teams, and a live scoreboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<nav class="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html">GAUNTLET<span>26</span></a>
+<div class="nav-links" id="navLinks">
+<a class="is-current" href="index.html">Home</a>
+<a href="rules.html">Rules</a>
+<a href="teams.html">Teams</a>
+<a href="games.html">Games</a>
+<a href="scoring.html">Scoring</a>
+<a href="live.html">Live</a>
+<a href="results.html">Results</a>
+<a href="recap.html">Recap</a>
+<a href="clips.html">Clips</a>
+<a href="finals.html">Finals</a>
+</div>
+<div class="nav-badge">€/$100 POOL</div>
+<button aria-expanded="false" aria-label="Toggle menu" class="nav-toggle" id="navToggle">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+<header class="hero" id="top">
+<div class="hero-content">
+<p class="hero-eyebrow">⚡ FRIEND SHOWDOWN ⚡</p>
+<h1 class="hero-title">THE GAMING<br/><span class="hero-title-accent">GAUNTLET</span></h1>
+<div class="hero-year">2026</div>
+<div class="hero-stats">
+<div class="hero-stat"><span data-count="6">0</span>Games</div>
+<div class="hero-stat-divider"></div>
+<div class="hero-stat"><span>2–4</span>Players / Team</div>
+<div class="hero-stat-divider"></div>
+<div class="hero-stat"><span data-count="100" data-prefix="€/$">€/$0</span>Prize Pool</div>
+</div>
+<a class="scroll-cue" href="#format">
+<span>How it works</span>
+<svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 6L8 11L13 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+</div>
+</header>
+<main>
+<section class="section format-section" id="format">
+<div class="container">
+<p class="eyebrow">How It Works</p>
+<h2 class="section-title">A Tournament Built<br/>For Versatility</h2>
+<p class="section-lead">Not just one game — every genre counts toward the team score.</p>
+<div class="flow-row">
+<div class="flow-card cut-corner" data-reveal="">
+<span class="flow-number">01</span>
+<h3>Team Phase</h3>
+<p>Duo, trio, or squad teams compete across 6 games picked live by the wheel. Points are awarded after every single one.</p>
+</div>
+<div aria-hidden="true" class="flow-arrow">→</div>
+<div class="flow-card cut-corner" data-reveal="">
+<span class="flow-number">02</span>
+<h3>League Final</h3>
+<p>The team with the most total points takes the team championship.</p>
+</div>
+<div aria-hidden="true" class="flow-arrow">→</div>
+<div class="flow-card cut-corner" data-reveal="">
+<span class="flow-number">03</span>
+<h3>Grand Finals</h3>
+<p>Only the winning team's players compete for the €100/$100 prize pool — 1v1, until a top three is decided.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="cta-section" id="ready">
+<div class="container">
+<p class="eyebrow">Are You Ready?</p>
+<h2 class="cta-title">May The Best<br/>Team Win 🏆</h2>
+<div class="cta-stats">6 Games · Duo / Trio / Squad · <span data-count="100" data-prefix="€/$">€/$0</span> Prize Pool</div>
+<p class="cta-sub">Consistency wins the league. Only one team gets to fight for the gold.</p>
+<p class="cta-tagline">GOOD LUCK. HAVE FUN. NO MERCY. ⚡</p>
+<p class="footer-fineprint">The Gaming Gauntlet · 2026</p>
+</div>
+</footer>
+
+<div id="syncBadge"><span class="dot"></span><span id="syncBadgeText">Live view</span></div>
+
+<button id="adminToggle">🔐 Host</button>
+<div id="adminPanel">
+<div class="admin-title">Host Login</div>
+<input autocomplete="username" id="adminEmail" placeholder="Email" type="email"/>
+<input autocomplete="current-password" id="adminPassword" placeholder="Password" type="password"/>
+<button id="adminLoginBtn">Log In</button>
+<button id="adminLogoutBtn">Log Out</button>
+<div id="adminStatus">Not logged in</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="site.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
